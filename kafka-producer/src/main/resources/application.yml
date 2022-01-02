@@ -1,0 +1,15 @@
+server:
+  port: 8000
+
+spring:
+  application:
+    name: PRODUCER-SERVICE
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+kafka:
+  bootstrapAddress: kafka-1:9092,kafka-1:9093,kafka-1:9094
