@@ -6,7 +6,10 @@ COPY . /opt/producer-service
 RUN mvn clean install -DskipTests
 
 # For Java 11, 
+#can't build with next:
 FROM adoptopenjdk/openjdk11:alpine-jre
+#but building with this:
+FROM openjdk:11-jdk-slim
 
 ARG JAR_FILE=producer-service.jar
 
